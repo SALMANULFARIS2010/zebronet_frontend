@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { ItemProvider } from './assets/ItemContext'; // Adjust the path as needed
+
+ReactDOM.render(
+  <ItemProvider>
     <App />
-  </StrictMode>,
-)
+  </ItemProvider>,
+  document.getElementById('root')
+);

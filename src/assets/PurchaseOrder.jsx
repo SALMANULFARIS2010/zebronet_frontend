@@ -1,13 +1,10 @@
 
 
 
-
-
-
 import React, { useContext, useState, useEffect } from 'react';
 import { ItemContext } from './ItemContext';
 import * as XLSX from 'xlsx';
-import './PurchaseOrder.css';
+ import './PurchaseOrder.css';
 
 const PurchaseOrder = () => {
   const { items, suppliers } = useContext(ItemContext); // Added suppliers from context
@@ -109,14 +106,14 @@ const PurchaseOrder = () => {
       <div>
         <label>Order No:</label>
         <input type="text" value={orderNo} readOnly />
-        
+        <br/>
         <label>Order Date:</label>
         <input 
           type="date" 
           value={orderDate} 
           onChange={handleDateChange} 
         />
-
+          <br/>
         <label>Supplier Name:</label>
         <select value={supplierName} onChange={handleSupplierSelect}>
           <option value="" disabled>Select Supplier</option>
@@ -210,3 +207,6 @@ const PurchaseOrder = () => {
 };
 
 export default PurchaseOrder;
+
+
+
